@@ -1,4 +1,4 @@
-[![Join the chat at https://gitter.im/arm-austin/Lobby](https://badges.gitter.im/arm-austin/Lobby.svg)](https://gitter.im/arm-austin/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Join the chat at https://gitter.im/tidy-ds-2019/Lobby](https://badges.gitter.im/tidy-ds-2019/Lobby.svg)](https://gitter.im/tidy-ds-2019/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 # Project Kickstart-R
 
@@ -46,4 +46,4 @@ Copyright 2018-present [George Cushen](https://georgecushen.com).
 
 Released under the [MIT](https://github.com/sourcethemes/project-kickstart-r/blob/master/LICENSE.md) license.
 
-[![Analytics](https://ga-beacon.appspot.com/UA-78646709-2/project-kickstart-r/readme?pixel)](https://github.com/igrigorik/ga-beacon) [![Join the chat at https://gitter.im/tidy-ds-2019/community](https://badges.gitter.im/tidy-ds-2019/community.svg)](https://gitter.im/tidy-ds-2019/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Analytics](https://ga-beacon.appspot.com/UA-78646709-2/project-kickstart-r/readme?pixel)](https://github.com/igrigorik/ga-beacon) 
