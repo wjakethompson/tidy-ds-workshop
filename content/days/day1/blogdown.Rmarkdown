@@ -1,0 +1,78 @@
+---
+title: blogdown
+
+date: "`r Sys.Date()`"
+
+draft: false
+toc: true
+type: docs
+
+linktitle: blogdown
+menu:
+  day1:
+    parent: PM session
+    weight: 7
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(warning = FALSE, message = FALSE, echo = FALSE)
+library(tidyverse)
+library(knitr)
+library(kableExtra)
+library(fontawesome)
+```
+
+
+## Slides {#slides}
+
+[Download slide .Rmd](../../../slides/blogdown.Rmd)
+
+```{r}
+slides <- tribble(~link, ~description, 
+                      "../../../slides/blogdown.html#1", "Full slide deck",
+                      "../../../slides/blogdown.html#outline", "Outline", 
+                      "../../../slides/blogdown.html#start", "Get started",
+                      "../../../slides/blogdown.html#publish", "Publishing")
+
+slides %>% 
+  mutate(emoji_id = c(emo::ji("picture"), 
+                      emo::ji("pad"), 
+                      glue::glue('{emo::ji("cloud")} or {emo::ji("computer")}'), 
+                      emo::ji("rocket"))) %>%
+  mutate(slide = cell_spec(glue::glue('{description} {emoji_id}'), 
+                           "html", 
+                           link = link)
+         ) %>% 
+  select("Key Slides" = slide) %>% 
+  kable("html", escape = FALSE) %>%
+  kable_styling(bootstrap_options = c("hover", "condensed")) 
+```
+
+
+## Activities {#activity}
+
+
+```{r}
+activities <- tribble(~link, ~description, ~time,
+                      "../../../slides/blogdown.html#yourturn-1", "Gaze into your directory structure, and site", "05:00 minutes",
+                      "../../../slides/blogdown.html#yourturn-2", "Edit the config.toml to customize your site", "05:00 minutes",
+                      "../../../slides/blogdown.html#yourturn-3", "Edit some exampleSite content, save, and let 'LiveReload' preview your changes", "05:00 minutes",
+                      "../../../slides/blogdown.html#yourturn-4", "Add new content", "05:00 minutes",
+                      "../../../slides/blogdown.html#yourturn-5", "Deploy", "05:00 minutes")
+
+activities %>% 
+  mutate(activity = cell_spec(glue::glue('{emo::ji("sent")} Your turn #{
+                                          stringr::str_sub(
+                                                            htmltools::htmlEscape(link, attribute = TRUE),
+                                          start = -1)}: {description}'), 
+                           "html", 
+                           link = link),
+         time = glue::glue('{emo::ji("clock")} {time}')
+         ) %>%
+  select(Activity = activity, Time = time) %>% 
+  kable("html", escape = FALSE) %>%
+  kable_styling(bootstrap_options = c("hover", "condensed")) 
+```
+
+## Enable Continuous Deployment with Netlify
+

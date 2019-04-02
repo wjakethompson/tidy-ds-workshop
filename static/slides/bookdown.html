@@ -1,0 +1,1661 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Making Books with R Markdown</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Alison Hill" />
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <script defer src="https://use.fontawesome.com/releases/v5.6.1/js/all.js" integrity="sha384-R5JkiUweZpJjELPWqttAYmYM1P3SNEJRM6ecTQF05pFFtxmCO+Y1CiUhvuDzgSVZ" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/penguin.css" type="text/css" />
+    <link rel="stylesheet" href="css/fonts.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+
+
+
+layout: true
+  
+&lt;div class="my-footer"&gt;&lt;span&gt;arm.rbind.io/slides/bookdown&lt;/span&gt;&lt;/div&gt;
+
+&lt;!-- this adds the link footer to all slides, depends on my-footer class in css--&gt;
+
+---
+name: bookdown-title
+background-image: url(img/karim-ghantous-333364-unsplash.jpg)
+background-size: cover
+
+# Meet bookdown
+
+&lt;img src="https://raw.githubusercontent.com/rstudio/hex-stickers/master/PNG/bookdown.png" alt="bookdown" width="180" /&gt;
+
+### .fancy[Making Books in R Markdown]
+
+.large[Alison Hill | rstudio::conf | 2019-01-16]
+
+&lt;!-- this ends up being the title slide since seal = FALSE--&gt;
+
+
+---
+exclude: true
+name: lifecycle
+
+individual files:
+
+.Rmd to .md (via knitr)
+
+.md to HTML (via pandoc)
+
+
+
+HTML to lots of HTML --&gt; BOOK (via bookdown)
+
+---
+background-image: url(img/art-lasovsky-559569-unsplash.jpg)
+background-size: cover
+
+# Hello 📖
+
+
++ Multiple R Markdown documents
+
++ Multiple output formats (E-books, PDF, HTML websites...)
+
++ Formatting features like cross-referencing, numbering of figures, equations, and tables.
+
+
+
+---
+
+.left-column[
+# Hello 📖
+]
+
+.right-column[
+&lt;iframe src="https://bookdown.org/yihui/bookdown/" width="100%" height="500px"&gt;&lt;/iframe&gt;
+https://bookdown.org/yihui/bookdown/
+]
+
+
+???
+
+We'll focus on the `gitbook` output format today, which renders your book to an HTML website.
+
+Here is an example of what one looks like- from the bookdown book!
+
+-&gt; Show TOC here in window
+
+---
+
+.left-column[
+# [The simplest book](https://minimal-bookdown.netlify.com/)
+
+
+]
+
+.right-column[
+&lt;iframe src="https://minimal-bookdown.netlify.com/" width="100%" height="500px"&gt;&lt;/iframe&gt;
+https://minimal-bookdown.netlify.com/
+
+]
+
+???
+
+This book was built from a single file, the index.Rmd file
+
+It has a title, and author, and a single (very short) chapter called "Hello World"
+
+You can also see it has one and only one output format: gitbook
+
+
+---
+
+# [The simplest book](https://minimal-bookdown.netlify.com/)
+
+```js
+---
+title: "A Book"
+author: "Frida Gomam"
+site: bookdown::bookdown_site 
+documentclass: book
+output:
+  bookdown::gitbook: default
+  #bookdown::pdf_book: default
+---
+# Hello World
+
+Hi.
+
+Bye.
+```
+
+.footnote[
+https://github.com/yihui/bookdown-minimal
+]
+
+???
+
+The index.Rmd is the only file required to build a book. 
+
+The site parameter is the only required one here, it must be bookdown::bookdown_site.
+
+The first and only chapter is called "Hello World"
+
+But it is unlikely you want to write a book this simple...
+
+You'll probably want a few chapters, and some nice extra features too.
+
+---
+class: inverse, middle, center
+
+# 📖
+
+# .fancy[Let's build a book right now]
+
+--
+
+.pull-left[
+### .fancy[.center[Local with GitHub]]
+### .fancy[.center[💻 + &lt;i class="fab fa-github fa-lg fa-fw"&gt;&lt;/i&gt;]]
+]
+
+--
+
+.pull-right[
+### .fancy[.center[Cloud or Local (no GitHub)]]
+### .fancy[.center[☁️ | 💻]]
+]
+
+
+---
+name: start-here
+class: inverse, middle
+
+.pull-left[
+### .fancy[.center[Local with GitHub]]
+### .fancy[.center[💻 + &lt;i class="fab fa-github fa-lg fa-fw"&gt;&lt;/i&gt;]]
+
+1. Make a [repo on GitHub](https://happygitwithr.com/new-github-first.html#make-a-repo-on-github-1)
+
+1. Make a [new RStudio project via git clone](https://happygitwithr.com/new-github-first.html#new-rstudio-project-via-git-clone) &lt;br&gt;
+    *File &gt; New Project &gt; Version Control &gt; Git*
+
+1. Run:
+
+
+```r
+bookdown:::bookdown_skeleton(getwd())
+```
+]
+
+--
+
+.pull-right[
+### .fancy[.center[Cloud or Local]]
+### .fancy[.center[☁️ | 💻]]
+
+1. Make a new RStudio project via wizard &lt;br&gt;
+    *File &gt; New Project &gt; New Directory*
+
+1. Scroll down to select: &lt;br&gt;
+    📖 *Book Project using bookdown*
+
+]
+
+--
+
+&lt;hr&gt;
+.center[Name it something like `&lt;yourname&gt;-arm-bookdown`]
+
+---
+
+# Project structure
+
+
+
+```r
+directory/
+├── .Rproj.user
+├── book.Rproj
+├── 01-intro.Rmd
+├── 02-literature.Rmd
+├── 03-method.Rmd
+├── 04-application.Rmd
+├── 05-summary.Rmd
+├── 06-references.Rmd
+├──  README.md
+├── _bookdown.yml
+├── _output.yml
+├──  book.bib
+*├──  index.Rmd # YAML + Chapter 1
+├──  preamble.tex
+└──  style.css
+```
+
+???
+
+You should all be looking at this directory structure. The index.Rmd again is the only required file here, with some specific YAML parameters set within it.
+
+We'll walk through these elements as we go, and what they all do.
+
+
+
+---
+
+# Project structure
+
+
+
+```r
+directory/
+├── .Rproj.user
+├── book.Rproj
+*├── 01-intro.Rmd
+*├── 02-literature.Rmd
+*├── 03-method.Rmd
+*├── 04-application.Rmd
+*├── 05-summary.Rmd
+*├── 06-references.Rmd
+├──  README.md
+├── _bookdown.yml
+├── _output.yml
+├──  book.bib
+*├──  index.Rmd
+├──  preamble.tex
+└──  style.css
+```
+
+
+???
+
+each chapter = an .Rmd file
+
+
+---
+class: inverse, middle, center
+
+
+# 📖
+
+# .fancy[Let's render our book right now]
+
+---
+name: noknit
+class: middle, inverse, center
+
+# DO NOT KNIT!
+
+![](https://media.giphy.com/media/Vg6vGMxVs9Sve/giphy.gif)
+
+---
+
+class: center, inverse, middle
+
+# 📚
+
+# .fancy[Preview book!]
+
+Mouse up to "Addins" ➡️ "Preview Book"
+
+&lt;img src="img/bookdown-preview.png" width="70%" /&gt;
+
+???
+
+What are we seeing here? Everything that is the _book folder. 
+
+---
+
+# Other options
+
+## .fancy[Option 1:]
+
+```r
+bookdown::render_book('index.Rmd')
+```
+
+--
+
+## .fancy[Option 2:] 
+
+
+```r
+bookdown::serve_book()
+```
+
+.blue["Preview Book"] Add-in calls `bookdown::serve_book()`
+
+---
+name: first-preview
+
+.left-column[
+# Hello 📖
+]
+
+.right-column[
+&lt;iframe src="https://skeleton-bookdown.netlify.com/" width="100%" height="500px"&gt;&lt;/iframe&gt;
+
+https://skeleton-bookdown.netlify.com/
+
+]
+
+???
+
+The index.Rmd contains the first "chapter" because it starts with a level one header. Notice that in your rendered book, the second chapter is called "Introduction"- but the filename was 01-intro.Rmd. Prerequisites, which is the first level-one heading in the index.Rmd became Chapter 1. And Introduction became Chapter 2.
+
+I'll show you later how to change this if you want to.
+
+---
+
+# New files created
+
+
+
+```r
+directory/
+├── .Rproj.user
+├── book.Rproj
+├── 01-intro.Rmd
+├── 02-literature.Rmd
+├── 03-method.Rmd
+├── 04-application.Rmd
+├── 05-summary.Rmd
+├── 06-references.Rmd
+├──  README.md
+├── _bookdown.yml
+├── _output.yml
+├──  book.bib
+├──  index.Rmd  
+├──  preamble.tex
+├──  style.css
+*├──  _book
+*├──  _bookdown_files
+*└──  packages.bib
+```
+
+
+???
+
+_book contains the generated book files- each .Rmd is saved as HTML files
+
+_bookdown_files contains figure and cache files that were generated automatically from knitr
+
+You could delete any of these and re-render your book to re-create them.
+
+
+---
+
+# `packages.bib`
+
+This is a code chunk in `index.Rmd`
+
+````
+```{r include = FALSE}
+# automatically create a bib database for R packages
+knitr::write_bib(c(
+  .packages(), 'bookdown', 'knitr', 'rmarkdown'
+), 'packages.bib')
+```
+````
+
+---
+exclude: true
+name: earlydeploy
+
+
+Netlify: drag and drop
+
+Or RStudio Connect
+
+in gitter chat copy/paste rendered link
+
+---
+name: clean
+exclude: true
+
+# Cleaning up
+
+
+
+```r
+bookdown::clean_book()
+```
+
+```
+These files/dirs can probably be removed: 
+
+_book/
+
+You can set options(bookdown.clean_book = TRUE) to allow 
+this function to always clean up the book directory for you.
+```
+
+
+
+To do this:
+
+
+```r
+bookdown::clean_book(TRUE)
+```
+
+
+
+.footnote[
+this is the default setting (clean = TRUE) for `render_book`
+]
+
+
+---
+name: section
+class: middle, inverse
+background-image: url(img/kelly-sikkema-450720-unsplash.jpg)
+background-size: cover
+
+---
+name: outline
+template: section
+
+.right-column[
+# &lt;i class="fas fa-feather-alt"&gt;&lt;/i&gt;.fancy[Outline]
+
++ Preface: [the `index.Rmd`](#index-YAML) &lt;a href="https://bookdown.org/yihui/rmarkdown/bookdown-project.html#index-file"&gt;&lt;i class="fas fa-book"&gt;&lt;/i&gt;&lt;/a&gt;
+
++ Story: [the chapter `.Rmd` files](#chapters) &lt;a href="https://bookdown.org/yihui/rmarkdown/bookdown-project.html#rmd-files"&gt;&lt;i class="fas fa-book"&gt;&lt;/i&gt;&lt;/a&gt;
+
++ Table of Contents: [the `_bookdown.yml`](#bookdown-YAML) &lt;a href="https://bookdown.org/yihui/rmarkdown/bookdown-project.html#bookdown.yml"&gt;&lt;i class="fas fa-book"&gt;&lt;/i&gt;&lt;/a&gt;
+
++ Off to Press: [the `_bookdown.yml` and `_output.yml` files, &amp; publishing](#press) &lt;a href="https://bookdown.org/yihui/rmarkdown/bookdown-project.html#output.yml"&gt;&lt;i class="fas fa-book"&gt;&lt;/i&gt;&lt;/a&gt;
+]
+
+
+---
+name: index-YAML
+template: section
+
+.right-column[
+
+# &lt;i class="fas fa-feather-alt"&gt;&lt;/i&gt;.fancy[Preface: &lt;br&gt;the `index.Rmd` file]
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+### .fancy["made before" (prae + factum)] 
+[-wikipedia](https://en.wikipedia.org/wiki/Preface)
+]
+
+
+---
+name: edit-yaml
+
+# `index.Rmd` = YAML
+
+
+```js
+--- 
+title: "A Minimal Book Example"
+author: "Yihui Xie"
+date: "2019-01-16"
+site: bookdown::bookdown_site
+documentclass: book
+bibliography: [book.bib, packages.bib]
+biblio-style: apalike
+link-citations: yes
+description: "This is a minimal example..."
+---
+```
+
+???
+
+The `site` is **required**
+
+
+---
+
+# `index.Rmd` = YAML
+
+.pull-left[
+```js
+--- 
+title: "A Minimal Book Example" 
+author: "Yihui Xie" 
+date: "2019-01-16" 
+site: bookdown::bookdown_site 
+documentclass: book
+bibliography: [book.bib, packages.bib]
+biblio-style: apalike
+link-citations: yes
+description: "This is a minimal example..."
+---
+```
+]
+
+.pull-right[
+
+&lt;img src="img/index-YAML-annotated.png" width="2235" /&gt;
+
+]
+
+---
+name: add-yaml
+
+# The `default.html` template
+
+.pull-left[
+
+```html
+&lt;!--bookdown:title:start--&gt;
+$if(title)$
+&lt;div id="$idprefix$header"&gt;
+&lt;h1 class="title"&gt;$title$&lt;/h1&gt;
+$if(subtitle)$
+&lt;h3 class="subtitle"&gt;&lt;em&gt;$subtitle$&lt;/em&gt;&lt;/h3&gt;
+$endif$
+$for(author)$
+$if(author.name)$
+&lt;h4 class="author"&gt;&lt;em&gt;$author.name$&lt;/em&gt;&lt;/h4&gt;
+$if(author.affiliation)$
+&lt;address class="author_afil"&gt;
+$author.affiliation$&lt;br&gt;$endif$
+$if(author.email)$
+&lt;a class="author_email" href="mailto:#"&gt;$author.email$&lt;/a&gt;
+...
+&lt;!--bookdown:title:end--&gt;
+```
+]
+
+.pull-right[
+
+
+
+```js
+title: "A Minimal Book Example"
+subtitle: "ARM workshop"
+author: 
+  name: Yihui Xie
+  affiliation: RStudio
+  email: xie@yihui.name
+```
+
+
+]
+
+.footnote[
+[default.html](https://github.com/rstudio/bookdown/blob/dda5f5a220058271a43ba8b81c6e6859ae3b9815/inst/templates/default.html)
+]
+
+---
+name: yourturn
+template: section
+
+.right-column[
+# &lt;i class="fas fa-edit"&gt;&lt;/i&gt; .fancy[Your turn]
+]
+
+---
+name: yourturn1
+template: yourturn
+
+.right-column[
+# .fancy[03:00 minutes]
+### Edit your `index.Rmd` YAML, save, and re-render your book.
+
+Ideas:
+
++ Change the [title and author](#edit-yaml)
++ Add a [subtitle, author affiliation, or author email](#add-yaml)&lt;br&gt;
+    
+.blue[.fancy[Hint:] Use [this link](https://github.com/rstudio/bookdown/blob/dda5f5a220058271a43ba8b81c6e6859ae3b9815/inst/templates/default.html) and find the `bookdown` title start/end (line 125).]
+
+]
+
+
+???
+
+At end of time:
+
+So those are the YAML parameters that change things you see
+
+But most YAML parameters change things you never see
+
+If you change the title, you may notice that the sidebar title has NOT changed! We'll show you why in a bit...
+
+---
+
+# Meta &lt;i class="fas fa-tags"&gt;&lt;/i&gt;
+
+
+
+```html
+&lt;head&gt;
+
+&lt;meta charset="utf-8"&gt;
+&lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8" /&gt;
+&lt;meta name="generator" content="pandoc" /&gt;
+&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+&lt;meta property="og:title" content="$pagetitle$" /&gt;
+&lt;meta property="og:type" content="book" /&gt;
+$if(url)$&lt;meta property="og:url" content="$url$" /&gt;$endif$
+$if(cover-image)$&lt;meta property="og:image" content="$url$$cover-image$" /&gt;$endif$
+$if(description)$&lt;meta property="og:description" content="$description$" /&gt;$endif$
+$if(github-repo)$&lt;meta name="github-repo" content="$github-repo$" /&gt;$endif$
+```
+
+.footnote[
+[default.html](https://github.com/rstudio/bookdown/blob/dda5f5a220058271a43ba8b81c6e6859ae3b9815/inst/templates/default.html)
+]
+
+???
+
+This is the default.html template for our book's metadata. Some are static, like the character set. But others, like the last 4 here, are actually pulling values from our index YAML. 
+
+So you can see that if there is a url specified, it is saved as a meta tag; same with cover-image. In fact, the cover-image YAML parameter, combined with url, is needed for any kind of social sharing of your site. The description will also show up.
+
+
+---
+name: meta
+
+
+# Viewing Meta &lt;i class="fas fa-tags"&gt;&lt;/i&gt;
+
+```js
+url: 'https\://alison-bookdown.netlify.com/' 
+cover-image: images/books.jpg # relative to index
+description: "This is a minimal example using the bookdown package for the rstudio::conf Advanced R Markdown Workshop."
+github-repo: rstudio-education/arm-companion-rsc2019
+```
+
+---
+template: meta
+name: meta-twitter
+
+
+&lt;img src="img/bookdown-meta-twitter.png" width="70%" style="display: block; margin: auto;" /&gt;
+
+
+.footnote[
+https://bookdown.org/yihui/bookdown/usage.html
+]
+
+???
+
+This explains why you won't see any changes when you add some YAML parameters to index.Rmd
+
+The changes are fed to Pandoc to generate meta-data for your book website, but cover-image for example does not actually add a cover-image to your repo (try it!).
+
+Demo within browser --&gt; inspect element --&gt; search
+
+I'll explain github-repo a bit later, but if you have one you may as well add it here.
+
+---
+template: meta
+name: meta-community
+
+
+&lt;img src="img/bookdown-meta-community.png" width="40%" style="display: block; margin: auto;" /&gt;
+
+
+.footnote[
+https://bookdown.org/yihui/bookdown/usage.html
+]
+
+---
+name: pandoc-meta
+
+# Viewing Meta &lt;i class="fas fa-tags"&gt;&lt;/i&gt;
+
+```
+&lt;meta property="og:url" content="https://alison-bookdown.netlify.com/"&gt;
+&lt;meta property="og:image" content="https://alison-bookdown.netlify.com/images/books.jpg"&gt;
+&lt;meta name="twitter:card" content="summary"&gt;
+&lt;meta name="twitter:title" content="Notes from the Advanced R Markdown Workshop"&gt;
+&lt;meta name="twitter:description" content="This is a minimal example using the bookdown package for the rstudio::conf Advanced R Markdown Workshop."&gt;
+&lt;meta name="twitter:image" content="https://alison-bookdown.netlify.com/images/books.jpg"&gt;
+```
+
+Test this out:
+
+https://cards-dev.twitter.com/validator
+
+Use this link:
+
+https://alison-bookdown.netlify.com/
+
+
+
+
+
+
+---
+name: yourturn-2
+template: yourturn
+
+.right-column[
+# .fancy[03:00 minutes]
+&lt;br&gt;
+### Add new YAML metadata tags to your `index.Rmd`, and re-render your book.
+
+
+Ideas:
+
++ Add [url, cover-image, description, github-repo](#meta)
+
+.blue[.fancy[Hint:] see all possible Pandoc EPUB metadata parameters [here](https://pandoc.org/MANUAL.html#epub-metadata).]
+
+]
+
+
+---
+name: chapters
+template: section
+
+.right-column[
+
+# &lt;i class="fas fa-feather-alt"&gt;&lt;/i&gt;.fancy[Story: &lt;br&gt;the chapter `.Rmd` files]
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+## .fancy[Examples:] 
+1. `index.Rmd`, 
+1. `01_*.Rmd`, 
+1. `02_*.Rmd`,
+1. `99_*.Rmd`
+
+]
+
+???
+
+Each chapter is an R markdown file. 
+
+None of the .Rmd files, other than index, have a YAML. 
+
+Each file should begin with a level-one header, like # Chapter Title.
+
+Each chapter has a dedicated page and is split into subchapters, indicated by lower-level headers, e.g., ## A subchapter within the chapter.
+
+The numbered chapter names are a naming convention- you don't have to use them. Any .Rmd files with begin with an underscore are skipped.
+
+
+---
+name: headers
+class: middle
+
+## .center[.fancy[Numbered Chapters (default)]]
+
+.pull-left[
+`index.Rmd`
+
+```r
+# Prerequisites
+
+This is a _sample_ book written in **Markdown**. 
+```
+&lt;hr&gt;
+`01-intro.Rmd`
+
+```r
+# Introduction
+
+Blah blah blah.
+```
+&lt;hr&gt;
+`02-literature.Rmd`
+
+```r
+# Literature
+
+Here is a review of existing methods.
+```
+
+]
+
+.pull-right[
+### Chapter 1  Prerequisites
+
+This is a _sample_ book written in **Markdown**. 
+&lt;hr&gt;
+### Chapter 2  Introduction
+
+Blah blah blah.
+&lt;hr&gt;
+### Chapter 3  Literature
+
+Here is a review of existing methods.
+]
+
+
+---
+class: middle
+name: headers-manip
+
+## .center[.fancy[Un-numbered Chapters]]
+
+.pull-left[
+`index.Rmd`
+
+```r
+*# Prerequisites {-}
+
+This is a _sample_ book written in **Markdown**. 
+```
+&lt;hr&gt;
+`01-intro.Rmd`
+
+```r
+# Introduction 
+
+Blah blah blah.
+```
+&lt;hr&gt;
+`02-literature.Rmd`
+
+```r
+# Literature
+
+Here is a review of existing methods.
+```
+
+]
+
+.pull-right[
+### Prerequisites
+
+This is a _sample_ book written in **Markdown**. 
+&lt;hr&gt;
+### Chapter 1  Introduction
+
+Blah blah blah.
+&lt;hr&gt;
+### Chapter 2  Literature
+
+Here is a review of existing methods.
+]
+
+???
+
+You can un-number a chapter by following the header text with curly brackets, with .unnumbered, like I did for "Prerequisites" here.
+
+
+---
+class: middle
+name: headers-cross
+
+## .center[.fancy[Label &amp; Cross-Reference Chapters/Subchapters]]
+
+.pull-left[
+`index.Rmd`
+
+```r
+# Prerequisites {-#pre} 
+
+This is a _sample_ book written in **Markdown**. 
+```
+&lt;hr&gt;
+`01-intro.Rmd`
+
+```r
+# Introduction {#intro}
+
+*Next we review the [literature](#lit)...
+```
+&lt;hr&gt;
+`02-literature.Rmd`
+
+```r
+# Literature {#lit}
+
+*Following Chapter \@ref(intro),...
+```
+
+]
+
+.pull-right[
+### Prerequisites
+
+This is a _sample_ book written in **Markdown**. 
+&lt;hr&gt;
+### Chapter 1  Introduction
+
+Next we review the [literature](https://skeleton-bookdown.netlify.com/literature.html)...
+&lt;hr&gt;
+### Chapter 2  Literature
+
+Following Chapter [1](https://skeleton-bookdown.netlify.com/intro.html),...
+]
+
+???
+
+
+bookdown supports a nice way for explicitly setting the header ID label. If you follow the header text with an opening curly bracket (separated from the text with a least one space), a hash, the ID label and a closing curly bracket, the ID label is set on the header. 
+
+Why would you want to do that? You would want to set ID labels so you can more easily:
+
+a) link to specific chapters/subchapters
+b) cross-reference within the book to chapters/subchapters
+
+---
+name: figure-caption
+
+## .center[.fancy[Caption a figure]]
+
+
+.pull-left[
+
+````
+```{r pressure-plot, fig.cap='Look!'}
+par(mar = c(4, 4, .1, .1))
+plot(pressure, type = 'b', pch = 19)
+```
+````
+
+]
+
+.pull-right[
+.center[
+
+&lt;img src="bookdown_files/figure-html/pressure-plot-1.png" width="75%" /&gt;
+
+**Fig. 1:** Look!]
+
+]
+
+---
+name: figure-cross
+
+## .center[.fancy[Cross-reference a figure]]
+
+
+.pull-left[
+
+See Figure `\@ref(fig:pressure-plot)`.
+
+````
+```{r pressure-plot}
+par(mar = c(4, 4, .1, .1))
+plot(pressure, type = 'b', pch = 19)
+```
+````
+
+]
+
+.pull-right[
+
+See Figure [1](https://skeleton-bookdown.netlify.com/intro.html).
+
+.center[
+
+&lt;img src="bookdown_files/figure-html/unnamed-chunk-25-1.png" width="75%" /&gt;
+
+]
+
+]
+
+
+---
+name: table-caption
+
+## .center[.fancy[Caption a table]]
+
+
+.pull-left[
+
+````
+```{r iris-tab}
+knitr::kable(
+  head(iris[,1:4], 3), caption = 'Look!',
+  booktabs = TRUE
+)
+```
+````
+
+]
+
+.pull-right[
+.center[
+**Table 1:** Look!
+&lt;table&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:right;"&gt; Sepal.Length &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Sepal.Width &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Petal.Length &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Petal.Width &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 5.1 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3.5 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1.4 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.2 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 4.9 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3.0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1.4 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.2 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 4.7 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 3.2 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1.3 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.2 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+]
+
+]
+
+---
+name: figs-tabs-cross
+
+## .center[.fancy[Cross-reference Figures &amp; Tables]]
+
+.pull-left[
+
+````
+```{r pressure-plot, fig.cap='Look!'}
+par(mar = c(4, 4, .1, .1))
+plot(pressure, type = 'b', pch = 19)
+```
+````
+
+````
+```{r iris-tab}
+knitr::kable(
+  head(iris[,1:4], 3), caption = 'Look!',
+  booktabs = TRUE
+)
+```
+````
+
+
+See Figure `\@ref(fig:pressure-plot)`.
+
+Don't miss Table `\@ref(tab:iris-tab)`.
+
+
+
+
+]
+
+.pull-right[
+See Figure [1](#figure-caption).
+
+See Table [1](#table-caption).
+
+]
+
+
+---
+
+# More
+
+&lt;i class="fas fa-external-link-alt"&gt;&lt;/i&gt; [Equations](https://bookdown.org/yihui/bookdown/markdown-extensions-by-bookdown.html#equations)
+
+&lt;i class="fas fa-external-link-alt"&gt;&lt;/i&gt; [Citations](https://bookdown.org/yihui/bookdown/citations.html)
+
+&lt;i class="fas fa-external-link-alt"&gt;&lt;/i&gt; [Theorems and proofs](https://bookdown.org/yihui/bookdown/markdown-extensions-by-bookdown.html#theorems)
+
+.footnote[
+[All components](https://bookdown.org/yihui/bookdown/components.html)
+]
+
+---
+name: yourturn3
+template: yourturn
+
+.right-column[
+# .fancy[10:00 minutes]
+&lt;br&gt;
+### Add/edit chapters in your book. Try using some of these elements:
+
++ [Markdown headers](#headers) like `#, ##, ###` .fancy[(to un-number: `{-}`, to label: `{#label}`)]
++ [Cross-references](#headers-cross) to chapters/sub-sections like `\@ref(id)`
++ [Figures](#figure-caption) and [tables](#table-caption) with captions
++ [Figures](#figure-cross) and [tables](#table-cross) cross-references like `\@ref(fig:my-plot)` &amp; `\@ref(tab:my-tab)`
+
+]
+
+
+---
+name: toc
+template: section
+
+.right-column[
+
+# &lt;i class="fas fa-feather-alt"&gt;&lt;/i&gt;.fancy[Table of Contents]
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+Examples: 
+
+&lt;i class="fas fa-link"&gt;&lt;/i&gt; https://skeleton-bookdown.netlify.com/
+
+&lt;i class="fas fa-link"&gt;&lt;/i&gt; https://alison-bookdown.netlify.com/
+]
+
+???
+
+
+---
+name: toc-default
+
+# Chapters/Subchapters Only
+
+.pull-left[
+`index.Rmd`
+
+```r
+# Prerequisites
+
+This is a _sample_ book written in **Markdown**. 
+```
+`01-intro.Rmd`
+
+```r
+# Introduction
+
+Blah blah blah.
+```
+
+`02-literature.Rmd`
+
+```r
+# Literature
+
+Here is a review of existing methods.
+```
+
+]
+
+.pull-right[
+.center[
+&lt;img src="img/bookdown-skeleton-toc.png" width="65%" /&gt;
+]
+]
+
+
+---
+name: toc-num-parts
+
+# Parts
+
+.pull-left[
+`index.Rmd`
+
+```r
+# Prerequisites {-}
+```
+`01-intro.Rmd`
+
+```r
+*# (PART) Act one {-}
+
+# Introduction
+```
+
+`02-literature.Rmd`
+
+```r
+# Literature
+```
+
+`03-methods.Rmd`
+
+```r
+*# (PART) Act two {-}
+
+# Methods
+```
+
+]
+
+.pull-right[
+.center[
+&lt;img src="img/bookdown-skeleton-toc_numparts.png" width="70%" /&gt;
+]
+]
+
+???
+
+Parts are just groups of chapters and do not have dedicated pages, but according to the gitbook::theme, it will show in the navigation.
+
+You add them with a first-level header followed by PART in all caps within parentheses. You 
+
+
+---
+name: toc-parts
+
+# Un-numbered Parts
+
+.pull-left[
+`index.Rmd`
+
+```r
+# Prerequisites {-}
+```
+`01-intro.Rmd`
+
+```r
+*# (PART\*) Act one {-}
+
+# Introduction
+```
+
+`02-literature.Rmd`
+
+```r
+# Literature
+```
+
+`03-methods.Rmd`
+
+```r
+*# (PART\*) Act two {-}
+
+# Methods
+```
+
+]
+
+.pull-right[
+.center[
+&lt;img src="img/bookdown-skeleton-toc_parts.png" width="70%" /&gt;
+]
+]
+
+???
+
+Parts already need to have the dash inside the curly braces, which was how we previously removed the numbering from individual chapters like Prerequisites.
+
+To create unnumbered parts, you need to add a forward slash and asterisk after PART, within the parentheses.
+
+---
+name: toc-appendix
+
+# Appendix
+
+.pull-left[
+`index.Rmd`
+
+```r
+# Prerequisites {-}
+```
+`01-intro.Rmd`
+
+```r
+# (PART\*) Act one {-}
+
+# Introduction
+```
+
+
+...
+
+`05-summary.Rmd`
+
+```r
+*# (APPENDIX) Other stuff {-}
+
+# Final Words
+```
+
+]
+
+.pull-right[
+.center[
+&lt;img src="img/bookdown-skeleton-toc_appendix.png" width="65%" /&gt;
+]
+]
+
+??? 
+
+We can also add an appendix, which by default is an unnumbered part.
+
+The numbering style of appendices will be automatically changed in LaTeX/PDF and HTML output (usually in the form A, A.1, A.2, B, B.1, …).
+
+---
+name: toc-collapse
+
+# TOC Sidebar
+
+New file: `_output.yml`
+
+.pull-left[
+
+```js
+bookdown::gitbook:
+  config:
+    toc:
+      collapse: none 
+      scroll_highlight: yes
+      before: |
+        &lt;li&gt;&lt;a href="./"&gt;A Minimal Book Example&lt;/a&gt;&lt;/li&gt;
+      after: |
+        &lt;li&gt;&lt;a href="https://github.com/rstudio/bookdown" target="blank"&gt;Published with bookdown&lt;/a&gt;&lt;/li&gt;
+```
+]
+
+.pull-right[
+`collapse`:
+
++ `section` (`#`, ~~`##`, `###`~~)
+
++ `subsection` (`#`, `##`, `###`)
+
++ `none` (`#`, `##`, `###`, ad infinitum)
+
+]
+
+---
+name: yourturn4
+template: yourturn
+
+.right-column[
+# .fancy[05:00 minutes]
+&lt;br&gt;
+### Change how your sidebar TOC looks &amp; works. Try using some of these elements:
+
++ [Parts](#toc-num-parts) with  `# (PART) My unique part {-}`
++ [Un-numbered parts](#toc-parts) with  `# (PART\*) My unique part {-}`
++ [Appendix](#toc-appendix) with  `# (APPENDIX) My appendix {-}`
++ [Collapsing TOC](#toc-collapse) with the `_output.yml`
+
+]
+  
+---
+exclude: true
+
+# Add R Code
+
+
+```r
+rmarkdown::find_external_resources(here::here("index.Rmd"))
+rmarkdown::yaml_front_matter(here::here("index.Rmd"))
+rmarkdown::metadata$title
+rmarkdown::resolve_output_format("index.Rmd", output_format = "bookdown::gitbook")$pandoc
+```
+
+
+
+---
+name: press
+template: section
+
+.right-column[
+
+# &lt;i class="fas fa-scroll"&gt;&lt;/i&gt;.fancy[Off to press:]
+
+## .fancy[the `_bookdown.yml` and `_output.yml` files]
+## .fancy[&amp; publishing]
+
+]
+
+
+---
+name: render
+
+# `_bookdown.yml`
+
+This YAML file gets fed to the `bookdown::render_book` function:
+
+
+```r
+render_book(input, output_format = NULL, ..., clean = TRUE,
+    envir = parent.frame(), clean_envir = !interactive(),
+    output_dir = NULL, new_session = NA, preview = FALSE,
+    encoding = "UTF-8", config_file = "_bookdown.yml")
+```
+
+
+--
+
+Arguments worth mentioning:
+
+
+```r
+new_session: yes 
+output_dir: "docs" # for gh-pages
+rmd_files: ["index.Rmd", "02-literature.Rmd", "01-intro.Rmd"]
+```
+
+--
+
+.footnote[
+Read more:
++ https://bookdown.org/yihui/rmarkdown/bookdown-project.html#bookdown.yml
++ https://bookdown.org/yihui/bookdown/configuration.html
++ https://blog.github.com/2016-08-17-simpler-github-pages-publishing/
+]
+
+???
+
+This file has no dash delimiters.
+
+the default config file for the `bookdown::render_book()` function is `_bookdown.yml`
+
+`new_session`: render each chapter in its own R session?
+
+`output_dir`: default = "_book"; "docs" if you want to publish to GH Pages
+]
+
+---
+name: output
+
+# `_output.yml`
+
+For each output format, different configurations are possible, for example:
+
+
+```r
+gitbook(fig_caption = TRUE, number_sections = TRUE, self_contained = FALSE,
+    lib_dir = "libs", pandoc_args = NULL, ..., template = "default",
+    split_by = c("chapter", "chapter+number", "section", "section+number", "rmd", "none"),
+    split_bib = TRUE, config = list(), table_css = TRUE)
+```
+
+--
+
+Most arguments are passed to [`rmarkdown::html_document()`](https://github.com/rstudio/rmarkdown/blob/master/R/html_document.R):
+
+```js
+bookdown::gitbook:
+  css: [css/arm.css]
+  highlight: kate
+  config: ???
+```
+
+--
+
+.footnote[
++ [css: use Hao Zhu's `bookdownThemeEditor`!](https://github.com/hebrewseniorlife/bookdownThemeEditor)
++ [highlight](https://bookdown.org/yihui/bookdown/yaml-options.html): `default`, `tango`, `pygments`, `kate`, `monochrome`, `espresso`, `zenburn`, and `haddock`
+]
+
+---
+name: output-config
+
+
+
+.pull-left[
+### .center[.fancy[Gitbook configurations]]
+
+```r
+gitbook_config = function(config = list()) {
+  default = list(
+    sharing = list(
+      github = FALSE, facebook = TRUE, twitter = TRUE, google = FALSE,
+      linkedin = FALSE, weibo = FALSE, instapaper = FALSE, vk = FALSE,
+      all = c('facebook', 'google', 'twitter', 'linkedin', 'weibo', 'instapaper')
+    ),
+    fontsettings = list(theme = 'white', family = 'sans', size = 2),
+    edit = list(link = NULL, text = NULL),
+    history = list(link = NULL, text = NULL),
+    download = NULL,
+    # toolbar = list(position = 'static'),
+    toc = list(collapse = 'subsection')
+)
+```
+]
+
+.pull-right[
+### .center[.fancy[Sample `_output.yml`]]
+```js
+bookdown::gitbook:
+  css: [css/arm.css]
+  highlight: kate
+  config:
+    toc: &lt;!--covered earlier!--&gt;
+    download: ["rmd"]
+    edit:
+      link: https://github.com/USERNAME/REPO/edit/BRANCH/%s
+      text: "Suggest an edit"
+    sharing:
+      github: yes
+      facebook: no
+      twitter: yes
+```
+
+Very important!
+1. Edit link to read: &lt;br&gt;
+    https://github.com/apreshill/armed/edit/master/%s
+1. For GitHub sharing, add to `index.Rmd` YAML: &lt;br&gt;
+    `github-repo: apreshill/armed`
+]
+
+
+.footnote[
+https://github.com/rstudio/bookdown/blob/master/R/gitbook.R
+]
+
+---
+exclude: true
+name: publish
+
+Options:
+
+1. RStudio Connect ☁️ + 💻
+1. Netlify 💻
+1. GitHub Pages
+
+---
+name: yourturn5
+template: yourturn
+
+.right-column[
+# .fancy[05:00 minutes]
+&lt;br&gt;
+### Tune your `gitbook` output by editing these 2 YAML files:
+
++ [`_bookdown.yml`](#render)
++ [`_output.yml`](#output) (.fancy[don't forget about [`config`!](#output-config)])
+  + Try adding the GitHub edit button, link to a repo, change the highlight
+
+]
+
+
+
+---
+exclude: true
+name: publish
+class: inverse, middle, center
+
+![](https://media.giphy.com/media/atcqQ5PuX41J6/giphy.gif)&lt;!-- --&gt;
+
+
+# .fancy[Let's publish a book right now]
+
+Options:
+
+1. RStudio Connect ☁️ + 💻
+1. GitHub + Netlify 💻
+
+
+---
+exclude: true
+name: rsconnect
+
+# RStudio Connect ☁️ + 💻
+
+
++ `account =`
++ `server =` (defaults to `beta.rstudioconnect.com`)
+
+
+```r
+publish_book(name = NULL, account = NULL, server = NULL,
+    render = c("none", "local", "server"))
+```
+
+---
+exclude: true
+name: netlify
+
+OPEN WITH DRAG AND DROP
+
+in gitter chat copy/paste rendered link
+
+# GitHub + Netlify 💻
+
+1. Preview your book one more time.
+1. Add/commit/push your edits to your remote repository.
+1. In your repo on GitHub `_book` folder
+1. Go to [Netlify.com](https://www.netlify.com/)
+  + Login
+  + Select "New Site from Git"
+  + Select "GitHub"
+  + Find &amp; select your repository with your bookdown project
+  + Leave "Build" empty
+  + Set "Publish Directory" to `_book` (unless you set the `output_dir` in your [`_bookdown.yml`](#render) to something else!)
+    </textarea>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="https://platform.twitter.com/widgets.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "solarized-light",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"ratio": "16:9"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function() {
+  var d = document, s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})();</script>
+
+<script>
+(function() {
+  var i, text, code, codes = document.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+})();
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
