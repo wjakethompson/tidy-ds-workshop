@@ -2,23 +2,18 @@
 active: true
 date: "2017-10-15T00:00:00-07:00"
 feature:
-- description: How does R Markdown actually work under the hood? We will talk about
-    the roles of [**knitr**](https://github.com/yihui/knitr) and [Pandoc](https://pandoc.org),
-    as well as the design of the built-in output formats in the **rmarkdown** package.
-  icon: search-plus
+- description: What are you? We'll learn how R handles different kinds of data.
+  icon: th-list
   icon_pack: fas
-  name: Internals
-- description: How to make use of custom templates, or create completely new output
-    formats? We will use [**rticles**](https://github.com/rstudio/rticles) as an example.
-  icon: code-branch
+  name: Data Types
+- description: But how do I use my own data? We'll learn how to import data from a variety of different file types using the [**readr**](https://readr.tidyverse.org) package.
+  icon: file-csv
   icon_pack: fas
-  name: Extending R Markdown
-- description: R Markdown also works with other computing languages, such as C/C++,
-    Python, Julia, Shell scripts, and so on. You can generate a series of reports
-    via parameterized reports. You can also embed interactive content in R Markdown.
-  icon: box
+  name: Import
+- description: Now that we've gotten data into R, we'll look at how to make the data tidy using the [**tidyr**](https://tidyr.tidyverse.org) package.
+  icon: code
   icon_pack: fas
-  name: Misc Topics
+  name: Tidy
 title: Day 2
 weight: 30
 widget: featurette
