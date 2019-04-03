@@ -161,7 +161,7 @@ enableGitInfo = false
   sharing = true
   
   # Default image for social sharing and search engines. Place image in `static/img/` folder and specify image name here.
-  sharing_image = "bandthree2.png"
+  sharing_image = "hex-stickers.png"
 
   # Privacy pack
   #   Show a cookie consent message to visitors
