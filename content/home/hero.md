@@ -2,16 +2,14 @@
 active: true
 cta:
   label: <i class="fas fa-download"></i> Download Workshop Files
-  url: https://github.com/rstudio-education/arm-workshop-rsc2019/archive/master.zip
+  url: https://github.com/wjakethompson/tidy-ds-workshop/archive/master.zip
 date: "2017-10-15T00:00:00-07:00"
-img: bandthree2.png
+img: hex-stickers.png
 title: Welcome
 weight: 10
 widget: hero_img
 ---
 
-This is the website for a two-day hands-on workshop based on the book ["R Markdown: The Definitive Guide."](https://bookdown.org/yihui/rmarkdown/) 
+This is the website for a five-day hands-on workshop based on the book ["R for Data Science"](https://r4ds.had.co.nz).
 
-This workshop will be offered January 15-16, just before [rstudio::conf 2019](https://www.rstudio.com/conference/) in Austin, TX. It is designed for those who want to take their R Markdown skills to the next level. 
-
-{{< youtube id="6JX4UNxEOLU">}}
+This workshop will be offered May 20-24, as part of the [Stats Camp: Summer Statistical Institute](http://crmda.ku.edu/statscamp) in Lawrence, KS, hosted by the [Center for Research Methods and Data Analysis](https://crmda.ku.edu) and the [Achievement and Assessment Institute](https://aai.ku.edu) at the University of Kansas. It is designed for those who want to learn practical applications of R for data analysis. 
