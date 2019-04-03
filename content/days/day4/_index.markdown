@@ -1,13 +1,13 @@
 ---
-title: Day 1 schedule
+title: Day 4 schedule
 author: ''
 date: "2019-04-03"
-slug: day1
+slug: day4
 categories: []
 tags: []
 menu:
-  day1:
-    name: "Day 1 schedule"
+  day4:
+    name: "Day 4 schedule"
     weight: 1
 toc: yes
 type: docs
@@ -19,15 +19,14 @@ type: docs
 * There will be a lunch break from 12:30pm -- 2:00pm.
 * We also offer mid-morning and mid-afternoon breaks.
 
-## Tentative Timetable for Day 1
+## Tentative Timetable for Day 4
 
 | Unit           | When          | What                                                             |
 |----------------|---------------|------------------------------------------------------------------|
-| Session #1, AM | 09:00-09:30   | Preliminaries                                                    |
-| Session #2, AM | 09:30-10:30   | Introduction to R and RStudio                                    |
+| Session #1, AM | 09:00-10:30   | Iteration with [purrr](https://purrr.tidyverse.org)              |
 |                | 10:30-11:00   | :coffee: BREAK                                                   |
-| Session #3, AM | 11:00-12:30   | Data Visualization with [ggplot2](https://ggplot2.tidyverse.org) |
+| Session #2, AM | 11:00-12:30   | Multiple Models                                                  |
 |                | 12:30-02:00   | :fork_and_knife: LUNCH                                           |
-| Session #4, PM | 02:00-03:30   | Data Manipulation with [dplyr](https://dplyr.tidyverse.org)      |
+| Session #3, PM | 02:00-03:30   | Writing Functions                                                |
 |                | 03:30-04:00   | :coffee: BREAK                                                   |
-| Session #5, PM | 04:00-05:00   | Data Manipulation with [dplyr](https://dplyr.tidyverse.org)      |
+| Session #4, PM | 04:00-05:00   | Case Study                                                       |
