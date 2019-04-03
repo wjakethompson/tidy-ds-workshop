@@ -1,5 +1,7 @@
 [![Join the chat at https://gitter.im/tidy-ds-2019/Lobby](https://badges.gitter.im/tidy-ds-2019/Lobby.svg)](https://gitter.im/tidy-ds-2019/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/f5aa3527-d363-44db-9289-3998f2e0f8f2/deploy-status)](https://app.netlify.com/sites/fervent-lovelace-c93802/deploys)
+
 # Project Kickstart-R
 
 **Project Kickstart-R** provides a minimal template to create a **Landing Page** and **Knowledge Sharing Platform** with *Academic* and **(R) Markdown**.
