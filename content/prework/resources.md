@@ -45,7 +45,7 @@ This book is published by [Princeton University Press](https://press.princeton.e
 
 This book is a comprehensive guide to R Markdown, its features, and capabilities. It also offers an overview of many of the most widely used extension packages (e.g., **bookdown**, **blogdown**, **xaringan**, etc.). If you are looking to learn more about R Markdown, this is the place to start.
 
-This book is published by [Chapman & Hall/CRC](https://www.crcpress.com/p/book/9781138359338). The online version of this book is free to read [here](https://bookdown.org/yihui/rmarkdown/) (thanks to Chapman & Hall/CRC), and licensed under the [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-nc-sa/4.0/).
+This book is published by [Chapman & Hall/CRC](https://www.crcpress.com/p/book/9781138359338). The online version of this book is free to read [here](https://bookdown.org/yihui/rmarkdown/) (thanks to Chapman & Hall/CRC), and licensed under the [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International](http://creativecommons.org/licenses/by-nc-sa/4.0/) License.
 
 <p style="text-align: center;"><a href="https://bookdown.org/yihui/rmarkdown/" target="_blank"><img src="/img/rmd-cover.png" alt="The R Markdown book cover" /></a></p>
 
@@ -55,7 +55,7 @@ This book is published by [Chapman & Hall/CRC](https://www.crcpress.com/p/book/9
 
 The **bookdown** package is built on top of R Markdown (http://rmarkdown.rstudio.com), and inherits the simplicity of the Markdown syntax (you can learn the basics in five minutes), as well as the possibility of multiple types of output formats, including PDF, HTML, Word, and others. It has also added features like multi-page HTML output, numbering and cross-referencing figures/tables/sections/equations, inserting parts/appendices, and using the [GitBook](https://www.gitbook.com) style to create elegant and appealing HTML book pages. The book itself is an example of how you can produce a professional-quality book from a series of R Markdown documents. You can find more examples at https://bookdown.org.
 
-This book is published by [Chapman & Hall/CRC](https://www.crcpress.com/product/isbn/9781138700109). The online version of this book is free to read [here](https://bookdown.org/yihui/bookdown/) (thanks to Chapman & Hall/CRC), and licensed under the [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-nc-sa/4.0/).
+This book is published by [Chapman & Hall/CRC](https://www.crcpress.com/product/isbn/9781138700109). The online version of this book is free to read [here](https://bookdown.org/yihui/bookdown/) (thanks to Chapman & Hall/CRC), and licensed under the [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International](http://creativecommons.org/licenses/by-nc-sa/4.0/) License.
 
 <p style="text-align: center;"><a href="https://bookdown.org/yihui/bookdown/" target="_blank"><img src="/img/bookdown-cover.jpg" alt="The bookdown book cover" /></a></p>
 
@@ -65,7 +65,7 @@ This book is published by [Chapman & Hall/CRC](https://www.crcpress.com/product/
 
 The **blogdown** package allows you to use dynamic R Markdown documents to build static websites featuring R code (or other programming languages) with automatically rendered output such as graphics, tables, analysis results, and HTML widgets. The **blogdown** package is also suitable for technical writing with elements such as citations, footnotes, and LaTeX math. This makes **blogdown** an ideal platform for any website designed to communicate information about data science, data analysis, data visualization, or R programming. Note that **blogdown** is not just for blogging or sites about R; it can also be used to create general-purpose websites. By default, **blogdown** uses Hugo, a popular open-source static website generator, which provides a fast and flexible way to build your site content to be shared online. 
 
-This book is published by [Chapman & Hall/CRC](https://www.crcpress.com/blogdown-Creating-Websites-with-R-Markdown/Xie-Hill-Thomas/p/book/9780815363729). The online version of this book is free to read [here](https://bookdown.org/yihui/blogdown/) (thanks to Chapman & Hall/CRC), and licensed under the [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-nc-sa/4.0/).
+This book is published by [Chapman & Hall/CRC](https://www.crcpress.com/blogdown-Creating-Websites-with-R-Markdown/Xie-Hill-Thomas/p/book/9780815363729). The online version of this book is free to read [here](https://bookdown.org/yihui/blogdown/) (thanks to Chapman & Hall/CRC), and licensed under the [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International](http://creativecommons.org/licenses/by-nc-sa/4.0/) License.
 
 <p style="text-align: center;"><a href="https://bookdown.org/yihui/blogdown/" target="_blank"><img src="/img/blogdown-cover.png" alt="The blogdown book cover" /></a></p>
 
@@ -85,6 +85,6 @@ This book is published by [O'Reilly](https://www.amazon.com/Hands-Programming-Wr
 
 Unlike this workshop, which focused on applied uses of R and the **tidyverse** packages, this book takes a deep dive into how the R language works, and how to program with it to make your own tools. This is a must read for anyone who wants to develop their programming skills and become an R developer.
 
-This book is published by [Chapman & Hall/CRC](). The online version of this book is free to read [here](https://adv-r.hadley.nz) (thanks to Chapman & Hall/CRC), and licensed under the [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-nc-sa/4.0/).
+This book is published by [Chapman & Hall/CRC](). The online version of this book is free to read [here](https://adv-r.hadley.nz) (thanks to Chapman & Hall/CRC), and licensed under the [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International](http://creativecommons.org/licenses/by-nc-sa/4.0/) License.
 
 <p style="text-align: center;"><a href="https://adv-r.hadley.nz" target="_blank"><img src="/img/advr-cover.png" alt="The Advanced R book cover" /></a></p>
