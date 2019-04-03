@@ -6,14 +6,14 @@
 
 # The URL of your website.
 # End your URL with a `/` trailing slash, e.g. `https://example.com/`.
-baseurl = "/"
+baseurl = "https://tidy-ds.wjakethompson.com/"
 
 # Title of your site
-title = "Advanced R Markdown Workshop"
+title = "Using R and the tidyverse for Data Science Workshop"
 
 # Your copyright notice - appears in site footer.
 # To display a copyright symbol, type `&copy;`.
-copyright = "&copy; 2018"
+copyright = "&copy; 2019"
 
 theme = "hugo-academic"
 
@@ -49,7 +49,7 @@ enableGitInfo = false
   smartypants = true  # `false` disables all smart punctuation substitutions (e.g. smart quotes, dashes, fractions).
 
 [params]
-  GithubEdit = "https://github.com/rstudio-education/arm-workshop-rsc2019/edit/master/content/"
+  GithubEdit = "https://github.com/wjakethompson/tidy-ds-workshop/edit/master/content/"
   # Color theme.
   #   Choose from `default`, `ocean`, `forest`, `coffee`, `dark`, or `1950s`.
   color_theme = "custom-theme"
@@ -59,21 +59,21 @@ enableGitInfo = false
   font = "custom-fonts"
 
   # Project name.
-  name = "Advanced R Markdown Workshop"
+  name = "Using R and the tidyverse for Data Science Workshop"
 
   # Project description.
   role = ""
 
   # Organizations/Affiliations.
   #   Separate multiple entries with a comma, using the form: `[ {name="Org1", url=""}, {name="Org2", url=""} ]`.
-  organizations = [ { name = "RStudio", url = "https://www.rstudio.com/" } ]
+  organizations = [ { name="CRMDA", url="https://crmda.ku.edu/" }, {name="AAI", url="https://aai.ku.edu"} ]
   # gravatar = false  # Get your avatar from Gravatar.com? (true/false)
   # avatar = "portrait.jpg"  # Specify an avatar image (in `static/img/` folder) or delete value to disable avatar.
-  email = "alison@rstudio.com"
+  email = "jakethompson@ku.edu"
   # address = "Building 1 Room 1, Stanford University, California, 90210, USA"
   # office_hours = "Monday 10:00 to 13:00 or email for appointment"
   # phone = "888 888 88 88"
-  twitter = "apreshill"
+  twitter = "wjakethompson"
   # skype = "echo123"
   # telegram = ""
 
@@ -82,7 +82,7 @@ enableGitInfo = false
 
   # Discussion link (e.g. link to a forum, mailing list, or chat).
   #   Uncomment line below to use.
-  discussion = { name = "Gitter Chat Room", url = "https://gitter.im/arm-austin/Lobby" }
+  discussion = { name="Gitter Chat Room", url="https://gitter.im/tidy-ds-2019/Lobby" }
 
   # Diplay a logo in navigation bar rather than title (optional).
   #   To enable, place an image in `static/img/` and reference its filename below. To disable, set the value to "".
@@ -252,47 +252,51 @@ enableGitInfo = false
   weight = 1
 
 [[menu.main]]
-  name = "Day 1"
+  name = "Schedule"
   weight = 2
-  identifier = "day1"
+  identifier = "sched"
   
 [[menu.main]]
-  name = "Day 1: Schedule"
-  pre = "<i class=\"fas fa-clock\"></i>"
+  name = "Day 1"
   url = "/days/day1"
   weight = 1
-  parent = "day1"
-
-[[menu.main]]
-  name = "Day 1: AM"
-  pre = "<i class=\"fas fa-sun\"></i>"
-  url = "/days/day1/day1-am"
-  weight = 2
-  parent = "day1"
-  
-[[menu.main]]
-  name = "Day 1: PM"
-  pre = "<i class=\"fas fa-moon\"></i>"
-  url = "/days/day1/day1-pm"
-  weight = 3
-  parent = "day1"
+  parent = "sched"
 
 [[menu.main]]
   name = "Day 2"
   url = "/days/day2"
+  weight = 2
+  parent = "sched"
+
+[[menu.main]]
+  name = "Day 3"
+  url = "/days/day3"
   weight = 3
+  parent = "sched"
+
+[[menu.main]]
+  name = "Day 4"
+  url = "/days/day4"
+  weight = 4
+  parent = "sched"
+
+[[menu.main]]
+  name = "Day 5"
+  url = "/days/day5"
+  weight = 5
+  parent = "sched"
   
 [[menu.main]]
   pre = "<i class=\"fas fa-comments fa-lg\"></i>"
   name = "Chat"
-  url = "https://gitter.im/arm-austin/Lobby"
-  weight = 4
+  url = "https://gitter.im/tidy-ds-2019/Lobby"
+  weight = 3
 
 [[menu.main]]
   pre = "<i class=\"fab fa-github fa-lg\"></i>"
   name = ""
-  url = "https://github.com/rstudio-education/rmarkdown-extensions-conf19"
-  weight = 5
+  url = "https://github.com/wjakethompson/tidy-ds-workshop"
+  weight = 4
 
 
 # Search.
