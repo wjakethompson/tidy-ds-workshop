@@ -1,7 +1,7 @@
 ---
 title: Welcome
 author: ''
-date: "2019-04-02"
+date: "2019-04-04"
 slug: welcome
 categories: []
 tags: []
@@ -30,3 +30,7 @@ We look forward to meeting and working with you all!
 ## Instructor
 
 Jake Thompson, ATLAS  <a href="https://wjakethompson.com/" target="_blank"><i class="fas fa-link"></i></a> <a href="https://github.com/wjakethompson" target="_blank"><i class="fab fa-github"></i></a> <a href="https://twitter.com/wjakethompson" target="_blank"><i class="fab fa-twitter"></i></a>
+
+## TAs
+
+Jeff Hoover
