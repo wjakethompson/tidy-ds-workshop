@@ -1,7 +1,7 @@
 ---
 title: Welcome
 author: ''
-date: "2019-04-04"
+date: "2019-04-05"
 slug: welcome
 categories: []
 tags: []
@@ -33,4 +33,4 @@ Jake Thompson, ATLAS  <a href="https://wjakethompson.com/" target="_blank"><i cl
 
 ## TAs
 
-Jeff Hoover
+Jeff Hoover  <a href="https://www.researchgate.net/profile/Jeffrey_Hoover4" target="_blank"><i class="fas fa-link"></i></a> <a href="https://github.com/JeffreyCHoover" target="_blank"><i class="fab fa-github"></i></a>
