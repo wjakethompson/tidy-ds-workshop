@@ -1,7 +1,7 @@
 ---
 title: Local setup
 author: ''
-date: "2019-04-02"
+date: "2019-05-06"
 slug: local
 categories: []
 tags: []
@@ -32,7 +32,7 @@ In this workshop, we will use R and [RStudio](https://www.rstudio.com/products/r
 
 ### Install R
 
-* A [recent version of R](https://cran.rstudio.com/) (>= 3.5.1 "Feather Spray") is recommended. You can check your version from the R Console:
+* A [recent version of R](https://cran.rstudio.com/) (>= 3.6.0 "Planting of a Tree") is recommended. You can check your version from the R Console:
 
 
 ```r
@@ -42,7 +42,7 @@ R.version.string
 
 ### Install RStudio
 
-* [RStudio](https://www.rstudio.com/products/rstudio/download/#download) (>= 1.1.463)  is recommended.
+* [RStudio](https://www.rstudio.com/products/rstudio/download/#download) (>= 1.2.1335)  is recommended.
 
 
 ### Upgrading your system
@@ -114,7 +114,7 @@ blogdown::install_hugo()
 
 #### Update Hugo (if necessary) {#update-hugo}
 
-In your R Console, please do the following to make sure that you are working with the latest version of Hugo (>= 0.54.0): 
+In your R Console, please do the following to make sure that you are working with the latest version of Hugo (>= 0.55.0): 
     
 
 ```r
