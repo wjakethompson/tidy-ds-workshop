@@ -2,7 +2,7 @@
 active: true
 cta:
   label: <i class="fas fa-download"></i> Download Workshop Files
-  url: https://github.com/wjakethompson/tidy-ds-workshop/archive/master.zip
+  url: https://github.com/wjakethompson/tidyds-2019/archive/master.zip
 date: "2017-10-15T00:00:00-07:00"
 img: hex-stickers.png
 title: Welcome
