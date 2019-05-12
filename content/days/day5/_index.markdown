@@ -1,7 +1,7 @@
 ---
 title: Day 5 schedule
 author: ''
-date: "2019-04-03"
+date: "2019-05-12"
 slug: day5
 categories: []
 tags: []
@@ -15,18 +15,18 @@ type: docs
 
 ## Basic Schedule
 
-* The workshop starts at 9:00am and ends at 5:00pm.
-* There will be a lunch break from 12:30pm -- 2:00pm.
+* The workshop starts at 9:00am and ends at 4:00pm.
+* There will be a lunch break from 12:00pm -- 1:30pm.
 * We also offer mid-morning and mid-afternoon breaks.
 
 ## Tentative Timetable for Day 5
 
 | Unit           | When          | What                                                                          |
 |----------------|---------------|-------------------------------------------------------------------------------|
-| Session #1, AM | 09:00-10:30   | Introduction to [R Markdown](https://rmarkdown.rstudio.com)                   |
-|                | 10:30-11:00   | :coffee: BREAK                                                                |
-| Session #2, AM | 11:00-12:30   | Multiple R Markdown Documents                                                 |
-|                | 12:30-02:00   | :fork_and_knife: LUNCH                                                        |
-| Session #3, PM | 02:00-03:30   | TBD ([vote here](https://github.com/wjakethompson/tidy-ds-workshop/issues/3)) |
-|                | 03:30-04:00   | :coffee: BREAK                                                                |
-| Session #4, PM | 04:00-05:00   | TBD ([vote here](https://github.com/wjakethompson/tidy-ds-workshop/issues/3)) |
+| Session #1, AM | 09:00-10:15   | Introduction to [R Markdown](https://rmarkdown.rstudio.com)                   |
+|                | 10:15-10:30   | :coffee: BREAK                                                                |
+| Session #2, AM | 10:30-12:00   | Multiple R Markdown Documents                                                 |
+|                | 12:00-01:30   | :fork_and_knife: LUNCH                                                        |
+| Session #3, PM | 01:30-02:30   | TBD ([vote here](https://github.com/wjakethompson/tidy-ds-workshop/issues/3)) |
+|                | 02:30-02:45   | :coffee: BREAK                                                                |
+| Session #4, PM | 02:45-04:00   | TBD ([vote here](https://github.com/wjakethompson/tidy-ds-workshop/issues/3)) |
