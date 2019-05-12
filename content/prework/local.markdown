@@ -1,7 +1,7 @@
 ---
 title: Local setup
 author: ''
-date: "2019-05-06"
+date: "2019-05-12"
 slug: local
 categories: []
 tags: []
@@ -62,14 +62,16 @@ There are to possible methods for installing the necessary packages:
 * [Install the companion package](#companion)
 * [Install packages individually](#ind-install)
 
-### tidydscompanion {#companion}
+### Option 1: tidydscompanion {#companion}
 
 You can download our workshop companion package from GitHub:
 
 
 ```r
-install.packages("remotes")
-remotes::install_github("wjakethompson/tidydscompanion", dependencies = TRUE)
+install.packages("tidyverse", dependencies = TRUE)
+install.packages("remotes", dependencies = TRUE)
+remotes::install_github("wjakethompson/tidydscompanion", dependencies = TRUE,
+                        upgrade = "always")
 ```
 
 Can you load the package?
@@ -80,52 +82,25 @@ Can you load the package?
 library(tidydscompanion)
 ```
 
-Proceed to [installing Hugo](#install-hugo).
-
-### Individual package installation {#ind-install}
+### Option 2: Individual package installation {#ind-install}
 
 For this workshop, you'll need to install several R packages. This section will guide you through installing the packages we will use. If you are comfortable installing packages in R, then you could run this code from your R console to install all of the necessary packages:
 
 
 ```r
-from_cran <- c("tidyverse", "rmarkdown", "bookdown", "blogdown",
-               "fivethirtyeight", "babynames")
-from_gh <- c("apreshill/bakeoff")
+from_cran <- c("babynames", "bookdown", "fivethirtyteight", "gapminder",
+               "here", "maps", "mapproj", "nycflights13", "rmarkdown",
+               "rsample", "skimr", "tidyverse", "viridis")
+from_gh <- c("r-lib/rlang", "tidyverse/tidyr")
 ```
 
 
 ```r
-install.packages(from_cran, dependencies = TRUE)
-
-# install.packages("remotes")
-remotes::install_github(from_gh, dependencies = TRUE)
+install.packages("remotes")
+remotes::install_cran(from_cran, dependencies = TRUE, upgrade = "always",
+                      repos = "https://cran.rstudio.com/")
+remotes::install_github(from_gh, dependencies = TRUE, upgrade = "always")
 ```
-
-Proceed to [installing Hugo](#install-hugo).
-
-### Install Hugo {#install-hugo}
-
-Hugo (https://gohugo.io) is the static site generator on which **blogdown** is based. You must install Hugo in order to build a site using the **blogdown** package. You may install Hugo using the **blogdown** package helper function in your R Console:
-
-
-```r
-blogdown::install_hugo()
-```
-
-#### Update Hugo (if necessary) {#update-hugo}
-
-In your R Console, please do the following to make sure that you are working with the latest version of Hugo (>= 0.55.0): 
-    
-
-```r
-blogdown::hugo_version() # to check your version
-blogdown::update_hugo() # to force an update
-```
-
-
-### Download script {#script}
-
-Click <a href="../tidy-ds-installs.R" download>here</a> to download an R script for installing all the necessary packages.
 
 -----
 
