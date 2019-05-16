@@ -1,7 +1,7 @@
 ---
 title: Local setup
 author: ''
-date: "2019-05-12"
+date: "2019-05-16"
 slug: local
 categories: []
 tags: []
@@ -29,6 +29,8 @@ In this workshop, we will use R and [RStudio](https://www.rstudio.com/products/r
 -----
 
 ## Install/upgrade software {#system}
+
+This section provides a very high level overview of the required software. More detailed instructions can be found in the [setup guides](https://crmda.ku.edu/setup) from the Center for Research Methods and Data Analysis.
 
 ### Install R
 
@@ -68,8 +70,9 @@ You can download our workshop companion package from GitHub:
 
 
 ```r
-install.packages("tidyverse", dependencies = TRUE)
 install.packages("remotes", dependencies = TRUE)
+remotes::install_cran("tidyverse", dependencies = TRUE, upgrade = "always",
+                      repos = "https://cran.rstudio.com/")
 remotes::install_github("wjakethompson/tidydscompanion", dependencies = TRUE,
                         upgrade = "always")
 ```
@@ -88,10 +91,10 @@ For this workshop, you'll need to install several R packages. This section will 
 
 
 ```r
-from_cran <- c("babynames", "bookdown", "fivethirtyteight", "gapminder",
-               "here", "maps", "mapproj", "nycflights13", "rmarkdown",
-               "rsample", "skimr", "tidyverse", "viridis")
-from_gh <- c("r-lib/rlang", "tidyverse/tidyr")
+from_cran <- c("babynames", "bookdown", "fivethirtyteight", "gapminder", "here",
+               "hrbrthemes", "knitr", "maps", "mapproj", "nycflights13",
+               "rmarkdown", "rsample", "skimr", "tidyverse", "viridis")
+from_gh <- c("clauswilke/colorblindr", "r-lib/rlang", "tidyverse/tidyr")
 ```
 
 
