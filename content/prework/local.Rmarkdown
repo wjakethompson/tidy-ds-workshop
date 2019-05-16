@@ -37,6 +37,8 @@ In this workshop, we will use R and [RStudio](https://www.rstudio.com/products/r
 
 ## Install/upgrade software {#system}
 
+This section provides a very high level overview of the required software. More detailed instructions can be found in the [setup guides](https://crmda.ku.edu/setup) from the Center for Research Methods and Data Analysis.
+
 ### Install R
 
 * A [recent version of R](https://cran.rstudio.com/) (>= 3.6.0 "Planting of a Tree") is recommended. You can check your version from the R Console:
@@ -73,8 +75,9 @@ There are to possible methods for installing the necessary packages:
 You can download our workshop companion package from GitHub:
 
 ```{r install-companion, eval = FALSE}
-install.packages("tidyverse", dependencies = TRUE)
 install.packages("remotes", dependencies = TRUE)
+remotes::install_cran("tidyverse", dependencies = TRUE, upgrade = "always",
+                      repos = "https://cran.rstudio.com/")
 remotes::install_github("wjakethompson/tidydscompanion", dependencies = TRUE,
                         upgrade = "always")
 ```
@@ -91,10 +94,10 @@ library(tidydscompanion)
 For this workshop, you'll need to install several R packages. This section will guide you through installing the packages we will use. If you are comfortable installing packages in R, then you could run this code from your R console to install all of the necessary packages:
 
 ```{r need_pkgs, eval = FALSE}
-from_cran <- c("babynames", "bookdown", "fivethirtyteight", "gapminder",
-               "here", "maps", "mapproj", "nycflights13", "rmarkdown",
-               "rsample", "skimr", "tidyverse", "viridis")
-from_gh <- c("r-lib/rlang", "tidyverse/tidyr")
+from_cran <- c("babynames", "bookdown", "fivethirtyteight", "gapminder", "here",
+               "hrbrthemes", "knitr", "maps", "mapproj", "nycflights13",
+               "rmarkdown", "rsample", "skimr", "tidyverse", "viridis")
+from_gh <- c("clauswilke/colorblindr", "r-lib/rlang", "tidyverse/tidyr")
 ```
 
 ```{r install_pkgs, eval = FALSE}
