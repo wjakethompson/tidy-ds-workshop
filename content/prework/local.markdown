@@ -1,7 +1,7 @@
 ---
 title: Local setup
 author: ''
-date: "2019-05-16"
+date: "2019-05-21"
 slug: local
 categories: []
 tags: []
@@ -41,6 +41,13 @@ This section provides a very high level overview of the required software. More 
 R.version.string
 ```
 
+#### Windows Only
+
+On Windows, you may need to install Rtools. Rtools can be downloaded from [here](https://cran.r-project.org/bin/windows/Rtools/) (the green row marked "recommended").
+
+Run the installer. When you reach a screen that offer the option to add Rtools to the system path, CHECK THE BOX. You want this to happen.
+
+Once Rtools finishes installing, restart your R session. You should then be able to install all of the packages correctly.
 
 ### Install RStudio
 
