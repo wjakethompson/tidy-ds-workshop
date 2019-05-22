@@ -1,0 +1,20 @@
+---
+title: Recordings
+author: ''
+date: "`r Sys.Date()`"
+slug: day6
+categories: []
+tags: []
+menu:
+  record:
+    name: "Recordings"
+    weight: 1
+toc: yes
+type: docs
+---
+
+<iframe
+src="https://cdnapisec.kaltura.com/p/368641/sp/36864100/embedIframeJs/uiconf_id/32884722/partner_id/368641/widget_id/1_9lsfkqvu?iframeembed=true&playerId=kaltura_player_5ce403e859628&flashvars[playlistAPI.kpl0Id]=1_9h0pbvhf&flashvars[playlistAPI.autoContinue]=true&flashvars[playlistAPI.autoInsert]=true&flashvars[ks]=&flashvars[localizationCode]=en"
+width="740" height="330" allowfullscreen webkitallowfullscreen
+mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *"
+frameborder="0" title="Kaltura Player"></iframe>

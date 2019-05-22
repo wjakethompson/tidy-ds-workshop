@@ -287,6 +287,12 @@ enableGitInfo = false
   parent = "sched"
   
 [[menu.main]]
+  name = "Recordings"
+  url = "/days/record"
+  weight = 6
+  parent = "sched"
+  
+[[menu.main]]
   pre = "<i class=\"fas fa-comments fa-lg\"></i>"
   name = "Chat"
   url = "https://gitter.im/tidy-ds-2019/Lobby"

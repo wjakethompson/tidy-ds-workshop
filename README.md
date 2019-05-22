@@ -7,6 +7,10 @@ This repository contains the materials and source code for the [webpage](https:/
 
 The [workshop website](https://tidy-ds.wjakethompson.com) is built using Project Kickstart-R and the Academic Hugo theme.
 
+## Workshop Materials
+
+* [Summer Statistical Institute 2019](https://github.com/wjakethompson/tidyds-2019)
+
 
 ## Project Kickstart-R
 
