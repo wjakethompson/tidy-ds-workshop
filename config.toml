@@ -56,7 +56,7 @@ enableGitInfo = false
 
   # Font style.
   #   Choose from `default`, `classic`, or `playfair`.
-  font = "custom-fonts"
+  font = "atlas-fonts"
 
   # Project name.
   name = "Using R and the tidyverse for Data Science Workshop"

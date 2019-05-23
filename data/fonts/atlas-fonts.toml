@@ -1,0 +1,15 @@
+# Font style metadata
+name = "atlas"
+
+# Optional Google font URL
+google_fonts = "Lato:400,700|Montserrat+13px|IBM+Plex+Mono"
+
+# Font families
+heading_font = "Montserrat 13px"
+body_font = "Montserrat"
+nav_font = "Montserrat 13px"
+mono_font = "IBM Plex Mono"
+
+# Font size
+font_size = "20"
+font_size_small = "16"
