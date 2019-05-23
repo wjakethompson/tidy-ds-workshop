@@ -2,7 +2,7 @@
 name = "atlas"
 
 # Optional Google font URL
-google_fonts = "Lato:400,700|Montserrat|IBM+Plex+Mono"
+google_fonts = "Montserrat|IBM+Plex+Mono"
 
 # Font families
 heading_font = "Montserrat"
