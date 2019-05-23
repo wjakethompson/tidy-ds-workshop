@@ -25,7 +25,7 @@ type: docs
 |----------------|---------------|-------------------------------------------------------------------------------|
 | Session #1, AM | 09:00-10:15   | Introduction to [R Markdown](https://rmarkdown.rstudio.com)                   |
 |                | 10:15-10:30   | :coffee: BREAK                                                                |
-| Session #2, AM | 10:30-12:00   | Multiple R Markdown Documents                                                 |
+| Session #2, AM | 10:30-12:00   | Extending R Markdown                                                          |
 |                | 12:00-01:30   | :fork_and_knife: LUNCH                                                        |
 | Session #3, PM | 01:30-02:30   | TBD ([vote here](https://github.com/wjakethompson/tidy-ds-workshop/issues/3)) |
 |                | 02:30-02:45   | :coffee: BREAK                                                                |
