@@ -5,9 +5,9 @@ name = "atlas"
 google_fonts = "Lato:400,700|Montserrat|IBM+Plex+Mono"
 
 # Font families
-heading_font = "Montserrat 13px"
+heading_font = "Montserrat"
 body_font = "Montserrat"
-nav_font = "Montserrat 13px"
+nav_font = "Montserrat"
 mono_font = "IBM Plex Mono"
 
 # Font size
