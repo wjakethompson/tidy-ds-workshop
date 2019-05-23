@@ -9,7 +9,7 @@
 baseurl = "https://tidy-ds.wjakethompson.com/"
 
 # Title of your site
-title = "Using R and the tidyverse for Data Science Workshop"
+title = "Tidy Data Science Workshop"
 
 # Your copyright notice - appears in site footer.
 # To display a copyright symbol, type `&copy;`.
@@ -59,7 +59,7 @@ enableGitInfo = false
   font = "atlas-fonts"
 
   # Project name.
-  name = "Using R and the tidyverse for Data Science Workshop"
+  name = "Tidy Data Science Workshop"
 
   # Project description.
   role = ""
