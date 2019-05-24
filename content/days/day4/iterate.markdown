@@ -1,0 +1,20 @@
+---
+title: Iteration
+date: "2019-05-24"
+draft: false
+type: docs
+linktitle: purrr
+menu:
+  day4:
+    name: "Iteration"
+    parent: Day 4 schedule
+    weight: 1
+---
+
+Below are the materials for learning about iteration with **purrr** and writing your own functions.
+
+:framed_picture: [Slides](https://github.com/wjakethompson/tidyds-2019/raw/master/slides/08-Iterate.pdf)
+
+:memo: [Exercises](https://github.com/wjakethompson/tidyds-2019/raw/master/08-Iterate.Rmd)
+
+:mag_right: [Solutions](https://github.com/wjakethompson/tidyds-2019/raw/master/solutions/08-Iterate-Solutions.Rmd)
