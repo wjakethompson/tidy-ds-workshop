@@ -1,5 +1,5 @@
 ---
-title: Preliminarries
+title: Preliminaries
 date: "2019-05-24"
 draft: false
 type: docs
