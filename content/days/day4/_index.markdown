@@ -1,7 +1,7 @@
 ---
 title: Day 4 schedule
 author: ''
-date: "2019-05-12"
+date: "2019-05-24"
 slug: day4
 categories: []
 tags: []
