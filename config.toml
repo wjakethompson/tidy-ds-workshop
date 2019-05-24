@@ -9,7 +9,7 @@
 baseurl = "https://tidy-ds.wjakethompson.com/"
 
 # Title of your site
-title = "Using R and the tidyverse for Data Science Workshop"
+title = "Tidy Data Science Workshop"
 
 # Your copyright notice - appears in site footer.
 # To display a copyright symbol, type `&copy;`.
@@ -52,14 +52,14 @@ enableGitInfo = false
   GithubEdit = "https://github.com/wjakethompson/tidy-ds-workshop/edit/master/content/"
   # Color theme.
   #   Choose from `default`, `ocean`, `forest`, `coffee`, `dark`, or `1950s`.
-  color_theme = "custom-theme"
+  color_theme = "atlas-theme"
 
   # Font style.
   #   Choose from `default`, `classic`, or `playfair`.
-  font = "custom-fonts"
+  font = "atlas-fonts"
 
   # Project name.
-  name = "Using R and the tidyverse for Data Science Workshop"
+  name = "Tidy Data Science Workshop"
 
   # Project description.
   role = ""
@@ -170,7 +170,7 @@ enableGitInfo = false
 
   # Link custom CSS and JS assets
   #   (relative to /static/css and /static/js respectively)
-  custom_css = ["arm-theme.css"]
+  custom_css = ["atlas-theme.css"]
   custom_js  = []
 
   # Publication types.
@@ -252,8 +252,13 @@ enableGitInfo = false
   weight = 1
 
 [[menu.main]]
-  name = "Schedule"
+  name = "Materials"
+  url = "postwork/"
   weight = 2
+
+[[menu.main]]
+  name = "Schedule"
+  weight = 3
   identifier = "sched"
   
 [[menu.main]]
@@ -287,22 +292,16 @@ enableGitInfo = false
   parent = "sched"
   
 [[menu.main]]
-  name = "Recordings"
-  url = "/days/record"
-  weight = 6
-  parent = "sched"
-  
-[[menu.main]]
   pre = "<i class=\"fas fa-comments fa-lg\"></i>"
   name = "Chat"
   url = "https://gitter.im/tidy-ds-2019/Lobby"
-  weight = 3
+  weight = 4
 
 [[menu.main]]
   pre = "<i class=\"fab fa-github fa-lg\"></i>"
   name = ""
   url = "https://github.com/wjakethompson/tidy-ds-workshop"
-  weight = 4
+  weight = 5
 
 
 # Search.

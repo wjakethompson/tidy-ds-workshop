@@ -1,10 +1,11 @@
 ---
 title: Day 5 schedule
 author: ''
-date: "2019-05-12"
+date: "2019-05-24"
 slug: day5
 categories: []
 tags: []
+linktitle: "Day 5 schedule"
 menu:
   day5:
     name: "Day 5 schedule"
@@ -23,10 +24,10 @@ type: docs
 
 | Unit           | When          | What                                                                          |
 |----------------|---------------|-------------------------------------------------------------------------------|
-| Session #1, AM | 09:00-10:15   | Introduction to [R Markdown](https://rmarkdown.rstudio.com)                   |
+| Session #1, AM | 09:00-10:15   | [Introduction](rmarkdown) to [R Markdown](https://rmarkdown.rstudio.com)      |
 |                | 10:15-10:30   | :coffee: BREAK                                                                |
-| Session #2, AM | 10:30-12:00   | Multiple R Markdown Documents                                                 |
+| Session #2, AM | 10:30-12:00   | [Extending R Markdown](rmarkdown)                                             |
 |                | 12:00-01:30   | :fork_and_knife: LUNCH                                                        |
-| Session #3, PM | 01:30-02:30   | TBD ([vote here](https://github.com/wjakethompson/tidy-ds-workshop/issues/3)) |
+| Session #3, PM | 01:30-02:30   | [Wrapping Up](wrapup)                                                         |
 |                | 02:30-02:45   | :coffee: BREAK                                                                |
 | Session #4, PM | 02:45-04:00   | TBD ([vote here](https://github.com/wjakethompson/tidy-ds-workshop/issues/3)) |

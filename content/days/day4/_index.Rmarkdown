@@ -5,6 +5,7 @@ date: "`r Sys.Date()`"
 slug: day4
 categories: []
 tags: []
+linktitle: "Day 4 schedule"
 menu:
   day4:
     name: "Day 4 schedule"
@@ -23,10 +24,10 @@ type: docs
 
 | Unit           | When          | What                                                             |
 |----------------|---------------|------------------------------------------------------------------|
-| Session #1, AM | 09:00-10:15   | Iteration with [purrr](https://purrr.tidyverse.org)              |
+| Session #1, AM | 09:00-10:15   | [Iteration](iterate) with [purrr](https://purrr.tidyverse.org)   |
 |                | 10:15-10:30   | :coffee: BREAK                                                   |
-| Session #2, AM | 10:30-12:00   | Writing Functions                                                |
+| Session #2, AM | 10:30-12:00   | [Writing Functions](iterate)                                     |
 |                | 12:00-01:30   | :fork_and_knife: LUNCH                                           |
-| Session #3, PM | 01:30-02:30   | Multiple Models                                                  |
+| Session #3, PM | 01:30-02:30   | [Multiple Models](organize)                                      |
 |                | 02:30-02:45   | :coffee: BREAK                                                   |
-| Session #4, PM | 02:45-04:00   | Case Study                                                       |
+| Session #4, PM | 02:45-04:00   | [Case Study](study2)                                             |

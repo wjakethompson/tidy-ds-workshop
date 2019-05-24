@@ -1,0 +1,25 @@
+# Theme metadata
+name = "atlas"
+
+# Is theme light or dark?
+light = true
+
+# Primary
+primary = "#165C7D"
+primary_light = "#165C7D"
+primary_dark = "##165C7D"
+
+# Links
+link = "#165C7D"
+link_hover = "#9BD3DD"
+
+# Menu
+menu_primary = "#fff"
+menu_text = "#165C7D"
+menu_text_active = "#9BD3DD"
+menu_title = "#165C7D"
+
+# Backgrounds
+background = ""
+home_section_odd = ""
+home_section_even = ""
