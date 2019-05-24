@@ -1,0 +1,20 @@
+---
+title: Model
+date: "2019-05-24"
+draft: false
+type: docs
+linktitle: modelr
+menu:
+  day3:
+    name: "Model"
+    parent: Day 3 schedule
+    weight: 2
+---
+
+Below are the materials for modeling data with **broom** and **modelr**.
+
+:framed_picture: [Slides](https://github.com/wjakethompson/tidyds-2019/raw/master/slides/07-Model.pdf)
+
+:memo: [Exercises](https://github.com/wjakethompson/tidyds-2019/raw/master/07-Model.Rmd)
+
+:mag_right: [Solutions](https://github.com/wjakethompson/tidyds-2019/raw/master/solutions/07-Model-Solutions.Rmd)
