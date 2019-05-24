@@ -1,14 +1,15 @@
 ---
 title: Recordings
 author: ''
-date: "2019-05-23"
+date: "2019-05-24"
 slug: day6
 categories: []
 tags: []
+linktitle: "Recordings"
 menu:
-  record:
+  postwork:
     name: "Recordings"
-    weight: 1
+    weight: 3
 toc: yes
 type: docs
 ---
