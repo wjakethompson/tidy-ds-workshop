@@ -17,4 +17,4 @@ Below are the materials for importing data with **readr**.
 
 :memo: [Exercises](https://github.com/wjakethompson/tidyds-2019/raw/master/04-Import.Rmd)
 
-:mag_right: [Solutions](https://github.com/wjakethompson/tidyds-2019/raw/master/solutions/04-Import.Rmd)
+:mag_right: [Solutions](https://github.com/wjakethompson/tidyds-2019/raw/master/solutions/04-Import-Solutions.Rmd)
