@@ -18,7 +18,9 @@ type: docs
 
 ## How can I access the workshop materials?
 
-The workshop materials can be downloaded using any of these methods:
+Individual slide decks, exercise files, and solutions can be downloaded for each day under the "Schedule" section.
+
+To download all of the course materials, use any of these methods:
 
 * View, clone, or fork the GitHub repository for the workshop [here](https://github.com/wjakethompson/tidyds-2019).
 * Click the "Download Workshop Files" button on [home page](/#hero).
