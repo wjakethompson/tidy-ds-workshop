@@ -1,7 +1,7 @@
 ---
 title: Day 2 schedule
 author: ''
-date: "2019-05-24"
+date: "2019-05-25"
 slug: day2
 categories: []
 tags: []
@@ -26,8 +26,8 @@ type: docs
 |----------------|---------------|------------------------------------------------------------------|
 | Session #1, AM | 09:00-10:15   | [Data Types](types)                                              |
 |                | 10:15-10:30   | :coffee: BREAK                                                   |
-| Session #2, AM | 10:30-12:00   | [Import Data](import) with [readr](https://readr.tidyverse.org)            |
+| Session #2, AM | 10:30-12:00   | [Import Data](import) with [readr](https://readr.tidyverse.org)  |
 |                | 12:00-01:30   | :fork_and_knife: LUNCH                                           |
-| Session #3, PM | 01:30-02:45   | [Tidy Data](tidy) with [tidyr](https://tidyr.tidyverse.org)              |
+| Session #3, PM | 01:30-02:45   | [Tidy Data](tidy) with [tidyr](https://tidyr.tidyverse.org)      |
 |                | 02:45-03:00   | :coffee: BREAK                                                   |
-| Session #4, PM | 03:00-04:00   | [Tidy Data](tidy) with [tidyr](https://tidyr.tidyverse.org)                                                       |
+| Session #4, PM | 03:00-04:00   | [Tidy Data](tidy) with [tidyr](https://tidyr.tidyverse.org)      |

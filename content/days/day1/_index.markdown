@@ -1,7 +1,7 @@
 ---
 title: Day 1 schedule
 author: ''
-date: "2019-05-24"
+date: "2019-05-25"
 slug: day1
 categories: []
 tags: []
@@ -22,13 +22,13 @@ type: docs
 
 ## Tentative Timetable for Day 1
 
-| Unit           | When          | What                                                             |
-|----------------|---------------|------------------------------------------------------------------|
-| Session #1, AM | 09:00-09:30   | [Preliminaries](prelim)                                          |
-| Session #2, AM | 09:30-10:15   | [Introduction to R and RStudio](prelim)                          |
-|                | 10:15-10:30   | :coffee: BREAK                                                   |
+| Unit           | When          | What                                                                          |
+|----------------|---------------|-------------------------------------------------------------------------------|
+| Session #1, AM | 09:00-09:30   | [Preliminaries](prelim)                                                       |
+| Session #2, AM | 09:30-10:15   | [Introduction to R and RStudio](prelim)                                       |
+|                | 10:15-10:30   | :coffee: BREAK                                                                |
 | Session #3, AM | 10:30-12:00   | [Data Visualization](visualize) with [ggplot2](https://ggplot2.tidyverse.org) |
-|                | 12:00-01:30   | :fork_and_knife: LUNCH                                           |
+|                | 12:00-01:30   | :fork_and_knife: LUNCH                                                        |
 | Session #4, PM | 01:30-02:30   | [Data Manipulation](transform) with [dplyr](https://dplyr.tidyverse.org)      |
-|                | 02:30-02:45   | :coffee: BREAK                                                   |
+|                | 02:30-02:45   | :coffee: BREAK                                                                |
 | Session #5, PM | 02:45-04:00   | [Data Manipulation](transform) with [dplyr](https://dplyr.tidyverse.org)      |

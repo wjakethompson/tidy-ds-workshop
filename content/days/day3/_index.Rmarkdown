@@ -22,12 +22,12 @@ type: docs
 
 ## Tentative Timetable for Day 3
 
-| Unit           | When          | What                                                                      |
-|----------------|---------------|---------------------------------------------------------------------------|
-| Session #1, AM | 09:00-10:00   | [Case Study](study1)                                                      |
-|                | 10:00-10:15   | :coffee: BREAK                                                            |
+| Unit           | When          | What                                                                               |
+|----------------|---------------|------------------------------------------------------------------------------------|
+| Session #1, AM | 09:00-10:00   | [Case Study](study1)                                                               |
+|                | 10:00-10:15   | :coffee: BREAK                                                                     |
 | Session #2, AM | 10:15-12:00   | [Modeling 1: Tidying Models](model) with [broom](https://broom.tidyverse.org)      |
-|                | 12:00-01:30   | :fork_and_knife: LUNCH                                                    |
+|                | 12:00-01:30   | :fork_and_knife: LUNCH                                                             |
 | Session #3, PM | 01:30-02:30   | [Modeling 2:Visualizing Models](model) with [modelr](https://modelr.tidyverse.org) |
-|                | 02:30-02:45   | :coffee: BREAK                                                            |
+|                | 02:30-02:45   | :coffee: BREAK                                                                     |
 | Session #4, PM | 02:45-04:00   | [Modeling 2:Visualizing Models](model) with [modelr](https://modelr.tidyverse.org) |
