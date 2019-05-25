@@ -1,7 +1,7 @@
 ---
 title: Welcome
 author: ''
-date: "2019-05-16"
+date: "2019-05-25"
 slug: welcome
 categories: []
 tags: []
@@ -13,7 +13,7 @@ toc: yes
 type: docs
 ---
 
-This site is the official home for all information related to the 2019 Using R and the **tidyverse** for Data Science workshop in Lawrence, KS (May 20-24). This is the place to find all the information you'll need to get the most out of this workshop, including software, R packages, and additional resources. 
+This site is the official home for all information related to the 2019 Tidy Data Science workshop in Lawrence, KS (May 20-24). This is the place to find all the information you'll need to get the most out of this workshop, including software, R packages, and additional resources. 
 
 ## Orientation
 

@@ -1,9 +1,9 @@
 [![Join the chat at https://gitter.im/tidy-ds-2019/Lobby](https://badges.gitter.im/tidy-ds-2019/Lobby.svg)](https://gitter.im/tidy-ds-2019/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/f5aa3527-d363-44db-9289-3998f2e0f8f2/deploy-status)](https://app.netlify.com/sites/fervent-lovelace-c93802/deploys)
 
-# Using R and the tidyverse for Data Science
+# Tidy Data Science
 
-This repository contains the materials and source code for the [webpage](https://tidy-ds.wjakethompson.com) for *Using R and the tidyverse for Data Science*. This is a 5-day workshop originally developed for the Stats Camp: Summer Statistical Institute hosted by the [Center for Research Methods and Data Analysis](https://crmda.ku.edu) and the [Achievement and Assessment Institute](https://aai.ku.edu) at the University of Kansas. All workshop materials are licensed under the [Creative Commons Attribution-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/) License.
+This repository contains the materials and source code for the [webpage](https://tidy-ds.wjakethompson.com) for *Tidy Data Science*. This is a 5-day workshop originally developed for the Stats Camp: Summer Statistical Institute hosted by the [Center for Research Methods and Data Analysis](https://crmda.ku.edu) and the [Achievement and Assessment Institute](https://aai.ku.edu) at the University of Kansas. All workshop materials are licensed under the [Creative Commons Attribution-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/) License.
 
 The [workshop website](https://tidy-ds.wjakethompson.com) is built using Project Kickstart-R and the Academic Hugo theme.
 
