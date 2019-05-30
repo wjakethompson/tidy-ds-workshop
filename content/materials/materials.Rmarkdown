@@ -2,12 +2,12 @@
 title: Download Materials
 author: ''
 date: "`r Sys.Date()`"
-slug: local
+slug: download
 categories: []
 tags: []
 linktitle: "Download Materials"
 menu:
-  postwork:
+  materials:
     name: "Download Materials"
     weight: 2
 toc: yes

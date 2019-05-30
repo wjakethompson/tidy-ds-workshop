@@ -253,7 +253,7 @@ enableGitInfo = false
 
 [[menu.main]]
   name = "Materials"
-  url = "postwork/"
+  url = "materials/"
   weight = 2
 
 [[menu.main]]

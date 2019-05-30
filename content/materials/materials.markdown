@@ -1,13 +1,13 @@
 ---
 title: Download Materials
 author: ''
-date: "2019-05-24"
-slug: local
+date: "2019-05-30"
+slug: download
 categories: []
 tags: []
 linktitle: "Download Materials"
 menu:
-  postwork:
+  materials:
     name: "Download Materials"
     weight: 2
 toc: yes

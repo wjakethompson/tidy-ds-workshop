@@ -1,13 +1,13 @@
 ---
 title: Recordings
 author: ''
-date: "`r Sys.Date()`"
-slug: day6
+date: "2019-05-30"
+slug: recordings
 categories: []
 tags: []
 linktitle: "Recordings"
 menu:
-  postwork:
+  materials:
     name: "Recordings"
     weight: 3
 toc: yes

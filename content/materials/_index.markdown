@@ -1,12 +1,12 @@
 ---
 title: Workshop Materials
 author: ''
-date: "2019-05-24"
+date: "2019-05-30"
 slug: nextsteps
 categories: []
 tags: []
 menu:
-  postwork:
+  materials:
     name: Workshop Materials
     weight: 1
 toc: yes
