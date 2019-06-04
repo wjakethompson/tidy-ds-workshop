@@ -1,0 +1,25 @@
+# Theme metadata
+name = "wjake"
+
+# Is theme light or dark?
+light = true
+
+# Primary
+primary = "#009FB7"
+primary_light = "#009FB7"
+primary_dark = "#009FB7"
+
+# Links
+link = "#009FB7"
+link_hover = "#FED766"
+
+# Menu
+menu_primary = "#272727"
+menu_text = "#009FB7"
+menu_text_active = "#FFFFFF"
+menu_title = "#009FB7"
+
+# Backgrounds
+background = ""
+home_section_odd = ""
+home_section_even = ""

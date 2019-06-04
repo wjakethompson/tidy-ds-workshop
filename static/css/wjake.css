@@ -1,0 +1,89 @@
+/* Override margins for figures. */
+figure {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* Make homepage section padding compact. */
+.home-section {
+  padding: 60px 0 60px 0;
+}
+
+/* Clean, minimal style for Hero widget. */
+.hero-overlay .hero-title,
+.hero-overlay .hero-lead {
+  color: #000;
+  text-shadow: none;
+}
+
+.hero-overlay .btn {
+  color: #fff;
+  text-shadow: none;
+}
+
+.hero-overlay .hero-lead a {
+  color: #aaa;
+  text-decoration-line: underline;
+}
+
+.hero-overlay {
+  padding: 0;
+}
+
+/* change text link/hover color for hero from white */
+.hero-overlay a {
+  color: #009FB7;
+}
+
+.hero-overlay a:hover {
+  color: #FED766;
+}
+
+/* change button color for hero too */
+.hero-overlay .btn {
+  border: none;
+  color: rgba(39, 39, 39, .8);
+  background: rgba(0, 159, 183, .5);
+}
+
+
+/* change button hover link color for hero too */
+.hero-overlay .btn:hover {
+  color: #fff;
+}
+
+.hero-overlay .btn[href]:hover,
+.hero-overlay .btn[href]:focus {
+  background: rgba(39, 39, 39, .8);
+}
+
+pre {
+  color: #696773;
+  /*border: 1px solid #ddd;*/
+  box-shadow: 5px 5px 5px #eee;
+  padding: 1em;
+  overflow-x: auto;
+  border-radius: 0px; /*undo rounded corners*/
+}
+
+code { 
+  color: #696773;
+  background: #f8f8f8; /* match github highlightjs */
+}
+
+pre code { 
+  color: #696773;
+  background: none; 
+}
+
+/* Docs: custom TOC foot. */
+
+.connect-widget {
+  margin-top: 30px;
+  font-size: 0.7rem;
+}
+
+.connect-widget ul {
+  list-style: none;
+  padding-left: 5px;
+}
