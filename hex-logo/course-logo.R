@@ -26,7 +26,7 @@ palette_flag <- function(n, palette) {
 # Create background ------------------------------------------------------------
 atlas_pal <- c("#8FD6BD", "#F2A900", "#9BD3DD", "#F0EC74")
 website_pal <- c("#F0F0F0", "#FED766", "#009FB7", "#696773")
-flag <- palette_flag(100, atlas_pal)
+flag <- palette_flag(100, website_pal)
 ggsave("palette-flag.png", plot = flag, path = here("static", "img"),
        width = 10, height = 6.18, units = "in", bg = "transparent",
        dpi = "retina")

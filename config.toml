@@ -52,11 +52,11 @@ enableGitInfo = false
   GithubEdit = "https://github.com/wjakethompson/tidy-ds-workshop/edit/master/content/"
   # Color theme.
   #   Choose from `default`, `ocean`, `forest`, `coffee`, `dark`, or `1950s`.
-  color_theme = "atlas-theme"
+  color_theme = "wjake"
 
   # Font style.
   #   Choose from `default`, `classic`, or `playfair`.
-  font = "atlas-fonts"
+  font = "wjake"
 
   # Project name.
   name = "Tidy Data Science Workshop"
@@ -170,7 +170,7 @@ enableGitInfo = false
 
   # Link custom CSS and JS assets
   #   (relative to /static/css and /static/js respectively)
-  custom_css = ["atlas-theme.css"]
+  custom_css = ["wjake.css"]
   custom_js  = []
 
   # Publication types.
