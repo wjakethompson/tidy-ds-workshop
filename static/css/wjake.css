@@ -76,6 +76,14 @@ pre code {
   background: none; 
 }
 
+a,
+a:hover,
+a:focus {
+  color: {{ .Get "link" }};
+  text-decoration: none;
+  transition: color 0.0s;
+}
+
 /* Docs: custom TOC foot. */
 
 .connect-widget {
