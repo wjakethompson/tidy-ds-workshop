@@ -1,7 +1,7 @@
 ---
 title: Workshop Materials
 author: ''
-date: "2019-05-30"
+date: "2019-06-06"
 slug: nextsteps
 categories: []
 tags: []
@@ -13,7 +13,9 @@ toc: yes
 type: docs
 ---
 
-Thank you for participating in the Tidy Data Science workshop! Here you'll find links to all of the materials that we will use throughout the week. In the bar on the left, you'll find links to download the course materials, as well as a link to the recordings of each sessions, which will be posted after each day. Finally, I've included some links to additional resources that may be useful for supplementing the material covered in this workshop and moving beyond what you will learn during the week.
+Thank you for participating in the Tidy Data Science workshop! Here you'll find links to all of the materials that we will use throughout the week. Much of the material for this workshop was originally developed by [Amelia McNamara](https://twitter.com/AmeliaMN), [Hadley Wickham](https://twitter.com/hadleywickham), [Charlotte Wickham](https://twitter.com/CVWickham), and [Garrett Grolemund](https://twitter.com/StatGarrett) for their [*Data Science in the tidyverse*](https://github.com/AmeliaMN/data-science-in-tidyverse) and [*Mastering the tidyverse*](https://github.com/rstudio-education/master-the-tidyverse) workshops, and adapted for our use here.
+
+In the bar on the left, you'll find links to download the course materials, as well as a link to the recordings of each sessions, which will be posted after each day. Finally, I've included some links to additional resources that may be useful for supplementing the material covered in this workshop and moving beyond what you will learn during the week.
 
 If you have any questions please don't hesitate to [contact](/#contact) us!
 
